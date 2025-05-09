@@ -1,0 +1,18 @@
+# Environnement virtuel
+env/
+__pycache__/
+*.pyc
+
+# Fichiers spécifiques à l’IDE
+.vscode/
+*.code-workspace
+
+# Fichiers système
+.DS_Store
+
+# Fichiers de la base de données locale (si utilisé)
+db.sqlite3
+
+# Fichiers de migrations compilés
+*.pyc
+
