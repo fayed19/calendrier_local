@@ -16,11 +16,16 @@
                     Du {{ event.start_time|date:"d/m/Y H:i" }} au {{ event.end_time|date:"d/m/Y H:i" }}<br>
                     Catégorie : {{ event.category }}<br>
                     <p>{{ event.description }}</p>
+
+                    <strong><a href="{% url 'detail_evenement' event.id %}">{{ event.title }}</a></strong>
+
                 </li>
             {% endfor %}
         </ul>
     {% else %}
         <p>Aucun événement à venir.</p>
     {% endif %}
+
+
 </body>
 </html>
