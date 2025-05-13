@@ -3,9 +3,14 @@ from .models import Event
 from django.utils import timezone
 
 # Create your views here.
-def liste_evenements(request):
+
+def index(request):
     evenements = Event.objects.filter(start_time__gte=timezone.now()).order_by('start_time')
-    return render(request, 'evenements/liste_evenements.html', {'evenements': evenements})
+    return render(request, 'evenements/index.html', {'evenements': evenements})
+
+# def liste_evenements(request):
+#     evenements = Event.objects.filter(start_time__gte=timezone.now()).order_by('start_time')
+#     return render(request, 'evenements/liste_evenements.html', {'evenements': evenements})
 
 
 def detail_evenement(request, event_id):
